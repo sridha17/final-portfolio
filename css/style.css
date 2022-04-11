@@ -116,6 +116,7 @@ nav li a:hover{
 nav li a.current{
     color: white;
     background: navy;
+    font-style: normal;
   }
  nav li a:active {
     color: rgb(183, 0, 255);
@@ -142,6 +143,10 @@ nav li a.current{
   img[src = "images/landscape-1.jpg"] {
       animation: none;
   }
+  .intro{
+    background-attachment: initial;
+  }
+  /* flipcard */
 }   
 
 img[src = "images/landscape-1.jpg"]{
@@ -151,6 +156,19 @@ img[src = "images/landscape-1.jpg"]{
   margin-right: auto;
 
 }
+.intro{
+  background-image: url("../images/parallax.jpg");
+  min-height: 500px;
+  margin: 30px;
+  padding: 30px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #707070;
+
+}
+
 
 form label{
   font-weight: bold
