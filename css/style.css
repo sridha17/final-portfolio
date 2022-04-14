@@ -18,7 +18,7 @@ h1{
     font-family: Quicksand;
 }
 h2{
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     margin: 0 35px 0 35px;
 }
@@ -45,7 +45,7 @@ p{
     width: 350px;
     height: auto;
     position: relative;
-    border: solid 16px white;
+    border: solid 8px white;
     margin: 2px;
   }
 
@@ -73,7 +73,8 @@ p{
 .containerFlex img{
   width: 350px;
   height: auto;
-  border: solid 16px white;
+  border: solid 10px white;
+  border-radius: 10px;
   margin: 2px;
 }
 
@@ -88,36 +89,34 @@ p{
     -ms-transform: translate(-50%, -50%);
   }
 nav{
-  background-color: rgb(182, 178, 240);
-  margin: 0 35px 0 35px;
+  background-color: white;
+  margin: 0 20px 0 20px;
   overflow: hidden;
 }
 nav li{
-  float: left;
   color: #f2f2f2;
+  vertical-align: middle;
+  opacity: 0.9;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px 10px;
 }
-a{
+nav li a{
+    display: block;
     color: navy;
+    padding: 5px;
+    height: 30px;
+    border-radius: 15px;
     font-style: italic;
     text-decoration: underline;
-    margin-left: 35px;
+    /* margin-left: 35px; */
   }
     
-nav li a:hover{
-    color: white;
-    background-color: navy;
-    font-style: italic;
-  }
 nav li a.current{
     color: white;
     background: navy;
     font-style: normal;
   }
- nav li a:active {
-    color: rgb(183, 0, 255);
-  }
+
 
   @keyframes example {
     from {
@@ -183,19 +182,17 @@ fieldset label, input, textarea{
 
 .grid{
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   row-gap: 20px;
 }
 .grid img{
   width: 100%;
   height: auto;
- 
-
-}
+ }
 
 
 .cheetah-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 9 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -204,7 +201,7 @@ fieldset label, input, textarea{
   font-size: 18px;
 }
 .cubs-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 10 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -213,7 +210,7 @@ fieldset label, input, textarea{
   font-size: 18px;
 }
 .tiger-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 1 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -228,7 +225,7 @@ fieldset label, input, textarea{
   overflow: hidden;
 }
 .lion-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 2 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -243,7 +240,7 @@ fieldset label, input, textarea{
   overflow: hidden;
  }
  .giraffe-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 3 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -258,7 +255,7 @@ fieldset label, input, textarea{
   overflow: hidden;
 }
 .heron-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 4 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -273,7 +270,7 @@ fieldset label, input, textarea{
   overflow: hidden;
 }
 .catcher-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 5 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -288,7 +285,7 @@ fieldset label, input, textarea{
   overflow: hidden;
 }
 .anhinga-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 6 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -303,7 +300,7 @@ fieldset label, input, textarea{
   overflow: hidden;
  }
  .turtle-text{
-   grid-column: 3 / span 2;
+   grid-column: 3 / span 1;
    grid-row: 7 / span 1;
    background-color: rgb(1, 1, 70);
    opacity: 0.7;
@@ -319,7 +316,7 @@ fieldset label, input, textarea{
   overflow: hidden;
 }
 .gator-text{
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 1;
   grid-row: 8 / span 1;
   background-color: rgb(1, 1, 70);
   opacity: 0.7;
@@ -348,6 +345,7 @@ fieldset label, input, textarea{
 
 
 .flip-card {
+  position: center;
   background-color: transparent;
   width: 1000px;
   height: auto;
@@ -383,7 +381,620 @@ fieldset label, input, textarea{
 
 /* Style the back side */
 .flip-card-back {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-color: navy;
+  padding: 10px;
   color: white;
   transform: rotateY(180deg);
+}
+
+/* tablet view */
+@media screen and (min-width: 750px){
+p{
+    font-size: 15px;
+    text-align: left;
+    margin: 0 35px 10px 35px;
+}
+h2{
+  font-size: 18px;
+  text-align: left;
+  margin: 0 35px 0 35px;
+}
+/* nav changes */
+nav{
+  background-color: white;
+  margin: 0 35px 0 35px;
+  overflow: hidden;
+}
+nav li{
+  float: left;
+  color: skyblue;
+  text-align: center;
+  border-radius: 0px;
+  padding: 10px 12px;
+  
+}
+nav li a{
+  text-decoration: none;
+    color: navy;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20x;
+  }
+    
+nav li a:focus{
+    color: white;
+    background-color: navy;
+    font-style: italic;
+
+    
+  }
+nav li a.current{
+    color: white;
+    background: skyblue;
+    font-style: normal;
+    border-radius: 0px;
+  }
+ nav li a:active {
+    color: rgb(183, 0, 255);
+  }
+/* grid  changes */
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  row-gap: 20px;
+  column-gap: 15px;
+}
+.grid img{
+  width: 100%;
+  height: 100%;
+ }
+ .cheetah-image{
+  grid-column: 4 / span 2;
+  grid-row: 9 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+}
+.cheetah-text{
+  grid-column: 5 / span 1;
+  grid-row: 10 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.cubs-image{
+  grid-column: 2 / span 2;
+  grid-row: 9 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+ }
+.cubs-text{
+  grid-column: 3 / span 1;
+  grid-row: 10 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.tiger-text{
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.tiger-image{
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+}
+.lion-text{
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+ }
+.lion-image{
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+ }
+ .giraffe-text{
+  grid-column: 3 / span 1;
+  grid-row: 4 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.giraffe-image{
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+}
+.heron-text{
+  grid-column: 5 / span 1;
+  grid-row: 4 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+ .heron-image{
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+}
+.catcher-text{
+  grid-column: 3 / span 1;
+  grid-row: 6 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.catcher-image{
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+}
+.anhinga-text{
+  grid-column: 5 / span 1;
+  grid-row: 6 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+ }
+.anhinga-image{
+  grid-column: 4 / span 2;
+  grid-row: 5 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+ }
+ .turtle-text{
+  grid-column: 3 / span 1;
+  grid-row: 8 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+ }
+
+.turtle-image{
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+}
+.gator-text{
+  grid-column: 5 / span 1;
+  grid-row: 8 / span 1;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 500px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+ .gator-image{
+  grid-column: 4 / span 2;
+  grid-row: 7 / span 2;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* flex changes */
+.containerFlex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.containerFlex img{
+  width: 380px;
+  height: auto;
+  border: dashed 5px skyblue;
+  margin: 10px;
+  opacity: 0.9;
+  
+}
+
+}
+
+/* desktop view */
+@media screen and (min-width: 1000px){
+p{
+    font-size: 18px;
+    text-align: left;
+    margin: 0 35px 10px 35px;
+}
+h2{
+  font-size: 22px;
+  text-align: left;
+  margin: 0 35px 0 35px;
+}
+/* nav changes */
+nav{
+  background-color: rgb(182, 178, 240);
+  padding-left: 20%;
+  padding-right: 15%;
+  margin: 0 35px 0 35px;
+  overflow: hidden;
+  align-items: center;
+}
+nav li{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+   padding: 14px 16px;
+}
+nav li a{
+    color: navy;
+    font-style: italic;
+    text-decoration: underline;
+    margin: auto;
+
+  }
+    
+nav li a:hover{
+    color: white;
+    background-color: navy;
+    font-style: italic;
+    border-radius: 0px;
+  }
+nav li a.current{
+    color: white;
+    background: navy;
+    font-style: normal;
+  }
+ nav li a:active {
+    color: rgb(183, 0, 255);
+  }
+/* grid  changes */
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  row-gap: 26px;
+  column-gap: 22px;
+  
+}
+.grid img{
+  width: 100%;
+  height: 100%;
+ }
+ .cheetah-image{
+  grid-column: 4 / span 2;
+  grid-row: 9 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.cheetah-text{
+  grid-column: 4 / span 2;
+  grid-row: 9 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.7;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+
+.cheetah-text:hover{
+  grid-column: 4 / span 2;
+  grid-row: 9 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+
+.cubs-image{
+  grid-column: 2 / span 2;
+  grid-row: 9 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+ }
+.cubs-text{
+  grid-column: 2 / span 2;
+  grid-row: 9 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.7;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;
+}
+.cubs-text:hover{
+  grid-column: 2 / span 2;
+  grid-row: 9 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+
+.tiger-text{
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.7;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;
+}
+.tiger-image{
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+}
+.tiger-text:hover{
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+.lion-text{
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;
+ }
+.lion-image{
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+ }
+ .lion-text:hover{
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+ .giraffe-text{
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;
+}
+.giraffe-image{
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+}
+.giraffe-text:hover{
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+.heron-text{
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;;
+}
+ .heron-image{
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+}
+.heron-text:hover{
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+.catcher-text{
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;
+}
+.catcher-image{
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+}
+.catcher-text:hover{
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+.anhinga-text{
+  grid-column: 4 / span 2;
+  grid-row: 5 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;
+ }
+.anhinga-image{
+  grid-column: 4 / span 2;
+  grid-row: 5 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+ }
+ .anhinga-text:hover{
+  grid-column: 4 / span 2;
+  grid-row: 5 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+ .turtle-text{
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;
+ }
+
+.turtle-image{
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+}
+.turtle-text:hover{
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+.gator-text{
+  grid-column: 4 / span 2;
+  grid-row: 7 / span 2;
+  background-color: rgb(1, 1, 70);
+  opacity: 0.8;
+  max-height: 600px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%;;
+}
+ .gator-image{
+  grid-column: 4 / span 2;
+  grid-row: 7 / span 2;
+  max-height: 600px;
+  overflow: hidden;
+}
+.gator-text:hover{
+  grid-column: 4 / span 2;
+  grid-row: 7 / span 2;
+  background-color: transparent;
+  opacity: 0.7;
+  max-height: 600px;
+  color: transparent;
+  font-size: 34px;
+  text-align: center;
+  padding-top: 25%
+}
+/* flex changes */
+.containerFlex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.containerFlex img{
+  width: 500px;
+  height: auto;
+  border: none;
+  margin: 20px;
+  opacity: .6;
+  border-radius: 0px;
+  
+}
+.containerFlex img:hover{
+  opacity: 1;
+
+}
 }
